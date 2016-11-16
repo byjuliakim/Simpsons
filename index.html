@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Which Simpsons Character Are You?</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<body>
+	<header id = "header">
+		<div class="wrapper clearfix">
+			<h1>Which Simpsons Character Are You?</h1>
+			<button id="takeQuiz">Take Quiz</button>
+		</div>
+		<footer id=header-footer>
+			<h6>Developed by: <a href="http://wwww.myronzhao.com">Myron</a> and <a href="http://www.byjuliakim.com">Julia</a></h6>
+		</footer>
+	</header>
+	<main id="main">
+		<h1>Which Simpsons Character Are You?</h1>
+		<section id="questions">
+			<form id="form">
+				<div class="question question1">
+					<h2>1. Are you a day person or night person?</h2>
+					<input type="radio" id="day" name="type" value="day" required><label for="day">Day</label>
+					<input type="radio" id="night" name="type" value="night" required><label for="night">Night</label>
+				</div>
+				<div class="question question2">
+					<h2>2. What's your personality type?</h2>
+					<input type="radio" id="lazy" name="personality" value="lazy" required><label for="lazy">Lazy</label>
+					<input type="radio" id="joker" name="personality" value="joker" required><label for="joker">Joker</label>
+					<input type="radio" id="smart" name="personality" value="smart" required><label for="smart">Smart</label>
+					<input type="radio" id="evil" name="personality" value="evil" required><label for="evil">Evil</label>
+					<input type="radio" id="nice" name="personality" value="nice" required><label for="nice">Nice</label>
+				</div>
+				<div class="question question3">
+					<h2>3. What's your thing?</h2>
+					<input type="radio" id="food" name="hobby" value="food" required><label for="food">Food</label>
+					<input type="radio" id="beer" name="hobby" value="beer" required><label for="beer">Beer</label>
+					<input type="radio" id="music" name="hobby" value="music" required><label for="music">Music</label>
+					<input type="radio" id="tv" name="hobby" value="tv" required><label for="tv">TV</label>
+				</div>
+				<div class="question question4">
+					<h2>4. Where would you hang out if you're in Springfield?</h2>
+					<input type="radio" id="moes" name="place" value="moes" required><label for="moes">Moe's</label>
+					<input type="radio" id="home" name="place" value="home" required><label for="home">Home</label>
+					<input type="radio" id="church" name="place" value="church" required><label for="church">Church</label>
+					<input type="radio" id="mart" name="place" value="mart" required><label for="mart">Kwik-E-Mart</label>
+					<input type="radio" id="outdoors" name="place" value="outdoors" required><label for="outdoors">Outside (duh!)</label>
+				</div>
+				<input type='submit' id="submit" value="Find Out!">
+			</form>
+			<footer id="answer-footer">
+				<h6>Developed by: <a href="http://wwww.myronzhao.com">Myron</a> and <a href="http://www.byjuliakim.com">Julia</a></h6>
+			</footer>
+		</section>
+		<section id="answers">
+			<div id="answerBox">
+				<h3>You are</h3> 
+				<h3 class="simpsonName"></h3>
+				<div id="results">
+					<img id="simpsonImage" alt=""></br>
+					<div class="description">
+						<p class="simpsonBio">bio</p>
+						<p>"<span class="simpsonQuote">quote</span>"</p>
+					</div>
+				</div>
+				<button id="reset">Play Again</button>
+				<a class="twitter-share-button" href="https://twitter.com/intentweet?text=Come%20find%20out%20which%20Simpsons%20character%20you%20are%20@" data-size="large"> Tweet</a>
+			</div>
+			<footer id="answer-footer">
+				<h6>Developed by: <a href="http://wwww.myronzhao.com">Myron</a> and <a href="http://www.byjuliakim.com">Julia</a></h6>
+			</footer>
+		</section>
+	</main>
+
+
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>

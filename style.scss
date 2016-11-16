@@ -1,0 +1,296 @@
+@import 'setup';
+@font-face{
+	font-family:simpsonsFont;
+	src: url('font/Simpsonfont.ttf');
+}
+body{
+	font-family: 'simpsonsFont', sans-serif;
+}
+header{
+	background: url('asset/header_background.jpg') no-repeat;
+	background-size: cover;
+	height:95vh;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	background-position: 50% 0%;
+	h1 {
+		font-size: 35px;
+	}
+}
+.wrapper{
+	background: linear-gradient(rgba(250,250,250,.7), rgba(0,0,0,.7));
+	width:60%;
+	height:40%;
+	border-radius: 50px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	color:yellow;
+	text-align: center;
+	min-width:650px;
+}
+h1,h3{
+	margin:0;
+	margin-bottom: 30px;
+	/* first layer at 1px */
+	text-shadow: -2px -2px 0px #000,
+	        0px -2px 0px #000,
+	        2px -2px 0px #000,
+	       -2px  0px 0px #000,
+	        2px  0px 0px #000,
+	       -2px  2px 0px #000,
+	        0px  2px 0px #000,
+	        2px  2px 0px #000,
+	       /* second layer at 2px */
+	       -2px -2px 0px #000,
+	       -1px -2px 0px #000,
+	        0px -2px 0px #000,
+	        1px -2px 0px #000,
+	        2px -2px 0px #000,
+	        2px -1px 0px #000,
+	        2px  0px 0px #000,
+	        2px  1px 0px #000,
+	        2px  2px 0px #000,
+	        1px  2px 0px #000,
+	        0px  2px 0px #000,
+	       -1px  2px 0px #000,
+	       -2px  2px 0px #000,
+	       -2px  1px 0px #000,
+	       -2px  0px 0px #000,
+	       -2px -1px 0px #000;
+	font-size: 30px;
+	color:yellow;
+}
+
+h2 {
+	margin: 10px 0;
+}
+main{
+	background: url(asset/background.jpg) no-repeat;
+	background-size: cover;
+	height:95vh;
+	width:100%;
+	background-position: 50% 0%;
+	position:relative;
+	display:flex;
+	flex-direction:column;
+	h1{
+		position:absolute;
+		top:5%;
+		left:10%;
+	}
+}
+
+#form, #answerBox{
+	background-color: rgba(250,250,250,.7);
+	width:760px;
+	padding: 15px 25px;
+	border-radius: 20px;
+}
+#questions, #answers{
+	position:absolute;
+	top:15%;
+	left:10%;
+}
+#answers h3{
+	display: inline; 
+	margin-right:10px;
+}
+#answers img{
+	border:2px solid black;
+	display:block;
+}
+#results {
+	display: flex;
+	align-items:center;
+	margin-top:20px;
+	.description {
+		padding-left: 20px;
+		p {
+			font-family: sans-serif;
+			line-height: 1.5;
+			color: black;
+			margin: 0;
+		}
+		.simpsonBio {
+			font-weight: bold;
+		}
+		.simpsonQuote {
+			font-size: 18px;
+		}
+	}
+}
+input[type=radio]{
+	display:none;
+}
+label{
+	padding: 10px 20px;
+	font-weight: bold;
+	border: 3px transparent solid;
+	display:inline-block;
+	transition: 0.5s;
+	border-radius:10px;
+}
+label:hover, label:focus{
+	border: yellow 3px solid;
+}
+input[type=radio]:checked + label {
+  border: red 3px solid;
+  background: white;
+}
+button, input[type=submit]{
+	background: white;
+	color: black;
+	font-size: 24px;
+	border:solid 3px black;
+	border-radius: 50px;
+	padding:10px 40px;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	transition: 0.5s;
+}
+button:hover, button:focus, input[type=submit]:hover, input[type=submit]:focus {
+	background: black;
+	color:yellow;
+}
+input[type=submit]{
+	position:relative;
+	left:50%;
+	transform:translateX(-50%);
+}
+
+
+@media (max-width: 900px) {
+  #form, #answerBox{
+  	width:90%;
+  	padding:3px 20px;
+  	input{
+  		margin-top:10px;
+  	}
+  }
+  .wrapper{
+  	width:90%;
+  	min-width:0;
+  }
+  main h1{
+  	top:3%;
+  	width:85%;
+  }
+  #questions, #answers{
+  	top:13%;
+  }
+  h2{
+  	margin:5px;
+  }
+ }
+
+ @media (max-width: 630px) {
+ 	main{
+ 		background-size: contain;
+ 		background-position: 50% 0%;
+		background-repeat: repeat-y;
+ 	}
+ 	.wrapper{
+ 		height:90%;
+ 	}
+	#questions, #answers{
+		top:20%;
+	} 	
+	#form, #answerBox{
+		background-color: rgba(250,250,250,.8);
+	}
+	label{
+		padding:2px 10px;
+		border: transparent 2px solid;
+	}
+	label:hover, label:focus{
+	  border: red 2px solid;
+	}
+	input[type=radio]:checked + label {
+	  border: red 2px solid;
+	  background: white;
+	}
+	h2{
+ 		font-size:18px;
+ 		margin-top:25px;
+ 	}
+ 	#results{
+		flex-direction:column;
+		align-items:center; 		
+ 	}
+ }
+
+.twitter-share-button{
+	float:right;
+	margin-top: 52px;
+ }
+
+
+ footer{
+ 	background: black;
+ 	letter-spacing: 2px;
+ 	text-align:center;
+ 	margin:0;
+ 	border-top: 5px solid yellow;
+ 	position:fixed;
+ 	bottom:0;
+ 	left:0;
+ 	width:100%;
+ 	color:yellow;
+ 	height:5vh;
+ 	display:flex;
+ 	align-items:center;
+ 	justify-content:center;
+ 	text-weight:normal;
+ 	a{
+ 		color:yellow;
+ 		
+ 	}
+ 	h6{
+ 		margin:0;
+
+ 	}
+
+ }
+
+ #question-footer, #answer-footer{
+ 	background:yellow;
+
+ 	border-top: 5px solid black;
+ 	color:black;
+ 	a{
+ 		color:black;
+ 	}
+ }
+
+
+ @media(max-width: 500px){
+ 	#results{
+ 		flex-direction: column;
+ 		.description {
+ 			padding: 0;
+ 		}
+ 	}
+ 	#answerBox {
+ 		padding: 3px 15px;
+ 	}
+ }
+
+ @media(max-width: 390px){
+ 	main h1{
+ 		font-size:23px;
+ 		margin-bottom:0;
+ 	}
+ 	#questions, #answers{
+ 		top:12%;
+ 	} 	
+ 	h2{
+ 		font-size:16px;
+ 		margin-top:20px;
+ 	}
+ }
+
+ 
